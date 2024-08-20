@@ -1,0 +1,62 @@
+
+- name: rmv
+  command: "$HOME/shs/rmc.sh"
+  schedule: '@hourly'
+  image: bullseye
+  emails: none
+
+# $HOME/local/bin/python3 $HOME/core8/pwb.py cite/reff makenewarchive -ns:0 -recentchanges:1000
+# $HOME/local/bin/python3 $HOME/core8/pwb.py cite/reff -newpages2:50
+# $HOME/local/bin/python3 $HOME/core8/pwb.py cite/reff -ns:0 -recentchanges:50
+- name: refacol2
+  command: "/data/project/himo/tfj_shs/reff.sh"
+  schedule: '*/4 * * * *'
+  image: tf-python39
+  emails: none
+
+
+# $HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 ppp:qq PP31 P17
+# $HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 ppp:تصنيف:بذرة_أعلام P27 P106
+- name: stbpp31
+  command: "/data/project/himo/tfj_shs/stub_p27.sh"
+  schedule: '5 3 * * *'
+  mem: 1Gi
+  #cpu: 2
+  image: tf-python39
+  emails: none
+
+# $HOME/local/bin/python3 $HOME/core8/pwb.py stub/wd b2 wikidata:bio cat:تصنيف:بذرة_أعلام limit:2000
+# $HOME/local/bin/python3 $HOME/core8/pwb.py stub/wd b2 new:تصنيف:بذرة numbs:300
+
+- name: stubwd
+  command: "/data/project/himo/tfj_shs/stub_wd.sh"
+  schedule: '5 3 * * *'
+  mem: 1Gi
+  #cpu: 2
+  image: tf-python39
+  emails: none
+
+#a مرة في اليوم
+- name: arwkisg
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/sug"
+  schedule: '1 1 * * *'
+  mem: 1Gi
+  #cpu: 2
+  image: python3.9
+  emails: none
+
+- name: stbsql2
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/stubsql"
+  schedule: '5 3 * * *'
+  mem: 1Gi
+  #cpu: 2
+  image: python3.9
+  emails: none
+
+- name: stbbio1
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/b2 new:تصنيف:بذرة_أعلام P106 withnoflage numbs:300 noflag"
+  schedule: '7 7 * * *'
+  mem: 1Gi
+  #cpu: 2
+  image: python3.9
+  emails: none

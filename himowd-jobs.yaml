@@ -1,0 +1,57 @@
+
+- name: rmv
+  command: "$HOME/shs/rmc.sh"
+  schedule: '@hourly'
+  image: bullseye
+  emails: none
+
+- name: dumps
+  command: "/data/project/himo/bots/dump_core/dump3/dump.sh"
+  schedule: '6 6 * * 1'
+  #mem: 2Gi
+  #cpu: 2
+  image: tf-python39
+  emails: none
+
+
+# a تسميات
+- name: clabels
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py alabel/labels limit:100"
+  schedule: '52 * * * *'
+  image: python3.9
+  emails: none
+
+#a أوصاف الصفحات الجديدة تصانيف اسم عائلة - اسم اول - مركب كميائي - قائمة ويكيميديا
+# tfj run cdc --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py nep/si3g -newpages:4000 save"
+- name: newp3
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py nep/si3g -newpages:400 save"
+  schedule: '*/5 * * * *'
+  image: python3.9
+  emails: none
+
+#a أوصاف الأشخاص
+- name: peonew3
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py people/new3 limit:1000"
+  schedule: '1 */6 * * *'
+  image: python3.9
+  emails: none
+
+- name: fam
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py des/fam"
+  schedule: '5 * * * *'
+  #mem: 1Gi
+  #cpu: 2
+  image: python3.9
+  emails: none
+
+- name: cyclist
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py cy/jsub -cat:تصنيف:سجل_فوز_دراج_من_ويكي_بيانات"
+  schedule: '@weekly'
+  image: python3.9
+  emails: none
+
+- name: wdlnk
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:0,14 -newpages:150 && $HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:14 -usernewpages:Mr.Ibrahembot"
+  schedule: '*/4 * * * *'
+  image: python3.9
+  emails: none

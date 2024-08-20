@@ -1,0 +1,62 @@
+
+- name: rmv
+  command: "$HOME/shs/rmc.sh"
+  schedule: '@hourly'
+  image: bullseye
+  emails: none
+
+# toolforge-jobs run teete --command "$HOME/pyvenv/bin/python3 -v" --image python3.9
+
+- name: auths-del
+  command: "$HOME/pyvenv/bin/python3 $HOME/core8/pwb.py auths/del"
+  schedule: "@weekly"
+  image: python3.9
+  emails: none
+
+- name: newall-1
+  command: "$HOME/pyvenv/bin/python3 $HOME/core8/pwb.py new_all/bot -ns:0 -newpages2:100 getred ili"
+  schedule: '*/3 * * * *'
+  image: python3.9
+  emails: none
+
+- name: newall-2
+  command: "$HOME/pyvenv/bin/python3 $HOME/core8/pwb.py new_all/bot -ns:0 -recentchanges:100"
+  schedule: '*/3 * * * *'
+  image: python3.9
+  emails: none
+
+- name: badcats
+  command: "$HOME/pyvenv/bin/python3 $HOME/c8/pwb.py arwiki/rm"
+  schedule: '56 1 * * *'
+  image: python3.9
+  emails: none
+
+- name: tempname
+  command: "$HOME/pyvenv/bin/python3 $HOME/c8/pwb.py arwiki/temptitle -cat:تصنيف:قوالب_تصفح_باسم_خاطئ"
+  schedule: '1 18 * * *'
+  image: python3.9
+  emails: none
+
+- name: lintlogs1
+  command: "$HOME/pyvenv/bin/python3 $HOME/c8/pwb.py arwiki/lintlog"
+  schedule: '56 1 * * *'
+  image: python3.9
+  emails: none
+
+- name: redcat
+  command: "$HOME/pyvenv/bin/python3 $HOME/c8/pwb.py arwiki/redcat"
+  schedule: '1 1 * * *'
+  image: python3.9
+  emails: none
+
+- name: portals
+  command: "$HOME/pyvenv/bin/python3 $HOME/c8/pwb.py portal/po -ns:0 2030 -cat:تصنيف:مقالات_بحاجة_لشريط_بوابات"
+  schedule: '5 5 * * *'
+  image: python3.9
+  emails: none
+
+- name: portals3
+  command: "$HOME/pyvenv/bin/python3 $HOME/c8/pwb.py portal/po -lange:enfr -newpages2:100"
+  schedule: '*/3 * * * *'
+  image: python3.9
+  emails: none

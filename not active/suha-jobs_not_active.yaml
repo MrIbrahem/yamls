@@ -1,0 +1,9 @@
+
+# a إضافة قالب أشخاص حسب المهنة
+- name: fooian1
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c30/m main3 -save"
+  schedule: '6 6 * * *'
+  mem: 1Gi
+  #cpu: 2
+  image: python3.9
+  emails: none

@@ -1,0 +1,70 @@
+
+# $HOME/local/bin/python3 $HOME/c8/pwb.py prope/prop6
+# $HOME/local/bin/python3 $HOME/c8/pwb.py prop/prop4 -ns:10 -ref:قالب:يستخدم_ويكي_بيانات2
+# $HOME/local/bin/python3 $HOME/c8/pwb.py prop/prop4 -ns:10 -ref:قالب:قيمة_ويكي_بيانات
+# $HOME/local/bin/python3 $HOME/c8/pwb.py templatecount/linknew -ref:قالب:استخدام_واسع
+# $HOME/local/bin/python3 $HOME/c8/pwb.py templatecount/linknew -page:ويكيبيديا:مشروع_صندوق_معلومات/القائمة_الحالية
+
+- name: rmv
+  command: "$HOME/shs/rmc.sh"
+  schedule: '@hourly'
+  image: bullseye
+  emails: none
+
+# $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1 -portal:اليمن
+# $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1 -portal:سباق_الدراجات_الهوائية
+# $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1000
+
+- name: prtals
+  command: "$HOME/tfj_shs/portals.sh"
+  schedule: '@weekly'
+  image: tf-python39
+  emails: none
+
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/illwd2 -ns:0,10 main3
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/ill2 -newpages:100 ill2
+
+- name: ili
+  command: "$HOME/tfj_shs/ili.sh"
+  schedule: "*/3 * * * *"
+  image: tf-python39
+  emails: none
+
+- name: mvn-cats
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvn/cats"
+  schedule: '@weekly'
+  image: python3.9
+  emails: none
+
+- name: mvcat
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvn/mvnew multixx"
+  schedule: '*/4 * * * *'
+  image: python3.9
+  emails: none
+
+- name: reff1
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py refn/r_page"
+  schedule: '1 * * * *'
+  image: python3.9
+  emails: none
+
+- name: reff9
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py refn/r -ns:0,10 -recentchanges:50"
+  schedule: '*/3 * * * *'
+  image: python3.9
+  emails: none
+
+- name: tmpcat4
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:0 -recentchanges:50 && $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -newpages2:50"
+  schedule: '*/3 * * * *'
+  image: python3.9
+  emails: none
+
+- name: temp2-cat
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:10 gen_ar_template -newpages:100"
+  schedule: '20 * * * *'
+  image: python3.9
+  emails: none
+

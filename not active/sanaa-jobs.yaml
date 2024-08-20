@@ -1,0 +1,10 @@
+# $HOME/local/bin/python3 $HOME/c8/pwb.py asapages/bot2
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa/import project:all
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa1/as_by_project all
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa1/assu
+
+- name: weeklyx
+  command: "/data/project/himo/tfj_shs/weekly.sh"
+  schedule: '@weekly'
+  image: tf-python39
+  emails: none

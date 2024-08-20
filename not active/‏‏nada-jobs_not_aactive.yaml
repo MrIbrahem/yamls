@@ -1,0 +1,6 @@
+
+# - name: ment
+  # command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ment/m -newpages2:100"
+  # schedule: "*/4 * * * *"
+  # image: python3.9
+  # emails: none

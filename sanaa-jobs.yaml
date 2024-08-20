@@ -1,0 +1,63 @@
+
+- name: asa1
+  command: "/data/project/himo/tfj_shs/asa.sh"
+  schedule: '*/3 * * * *'
+  image: tf-python39
+  emails: none
+
+
+- name: weeklyx
+  command: "/data/project/himo/tfj_shs/weekly.sh"
+  schedule: '@weekly'
+  image: tf-python39
+  emails: none
+
+- name: asaproj
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py asa/lists/main_projr"
+  schedule: '1 1 * * *'
+  image: python3.9
+  emails: none
+
+- name: asapages
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py asapages/bot"
+  schedule: '1 * * * *'
+  image: python3.9
+  emails: none
+
+- name: dailyas
+  command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/ssql main3 sqladdclass limit:3000 llang:enfr"
+  schedule: '5 3 * * *'
+  image: python3.9
+  emails: none
+
+- name: bbio1
+  command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/bio sql"
+  schedule: '36 * * * *'
+  image: python3.9
+  emails: none
+
+- name: bbio2
+  command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/bio -qudda:io"
+  schedule: '36 * * * *'
+  image: python3.9
+  emails: none
+
+- name: asalist
+  command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -cat:تصنيف:مقالات_بحاجة_لمراجعة_الصنف"
+  schedule: '40 */5 * * *'
+  image: python3.9
+  emails: none
+
+- name: axera1
+  command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/cate addpro allxer"
+  schedule: '4 4 * * *'
+  mem: 1Gi
+  image: python3.9
+  emails: none
+
+- name: axera2
+  command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/infobox"
+  schedule: '4 4 * * *'
+  mem: 1Gi
+  image: python3.9
+  emails: none
