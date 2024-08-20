@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy to server
+
+      - name: himo
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
@@ -18,4 +19,43 @@ jobs:
           script_stop: true
           key: ${{ secrets.KEY }}
           script: |
-            become himo sh -c "echo ''"
+            become himo sh -c "cp /home/runner/work/yamls/yamls/himo-jobs.yaml $HOME -v"
+
+      - name: himowd
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: 22
+          request_pty: true
+          script_stop: true
+          key: ${{ secrets.KEY }}
+          script: |
+            become himowd sh -c "cp /home/runner/work/yamls/yamls/himowd-jobs.yaml $HOME -v"
+
+
+      - name: lyan
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: 22
+          request_pty: true
+          script_stop: true
+          key: ${{ secrets.KEY }}
+          script: |
+            become lyan sh -c "cp /home/runner/work/yamls/yamls/lyan-jobs.yaml $HOME -v"
+
+
+      - name: nada
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: 22
+          request_pty: true
+          script_stop: true
+          key: ${{ secrets.KEY }}
+          script: |
+            become nada sh -c "cp /home/runner/work/yamls/yamls/nada-jobs.yaml $HOME -v"
+
