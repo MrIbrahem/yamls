@@ -1,7 +1,7 @@
 name: Restart.yml
 on:
   schedule:
-    - cron: "43 * * * *"
+    - cron: "50 * * * *"
 
 jobs:
   build:
@@ -28,4 +28,6 @@ jobs:
           script_stop: true
           key: ${{ secrets.KEY }}
           script: |
-            become ${{ matrix.user }} sh -c "toolforge jobs flush; toolforge jobs load ${{ matrix.user }}-jobs.yaml"
+            become ${{ matrix.user }}
+            toolforge jobs flush
+            toolforge jobs load ${{ matrix.user }}-jobs.yaml
