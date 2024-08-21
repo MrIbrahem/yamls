@@ -1,4 +1,4 @@
-name: Restart Jobs
+name: Manually Restart
 
 on:
   # start manually
