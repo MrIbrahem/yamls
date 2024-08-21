@@ -1,7 +1,7 @@
 name: Restart.yml
 on:
   schedule:
-    - cron: "4 1 * * *"
+    - cron: "5 1 * * *"
 
 jobs:
   build:
