@@ -1,11 +1,12 @@
 name: Restart.yml
 on:
   schedule:
-    - cron: "12 * * * *"
+    - cron: "19 1 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         user:
