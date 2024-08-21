@@ -1,35 +1,35 @@
 name: Restart
 
 on:
-schedule:
-	- cron: "30 * * * *"
+    schedule:
+        - cron: "30 * * * *"
 
 jobs:
-build:
-	runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-	strategy:
-	matrix:
-		user:
-		- himo
-		- himowd
-		- lyan
-		- nada
-		- sanaa
-		- suha
-	steps:
-	- uses: actions/checkout@v2
+        strategy:
+            matrix:
+                user:
+                    - himo
+                    - himowd
+                    - lyan
+                    - nada
+                    - sanaa
+                    - suha
+        steps:
+            - uses: actions/checkout@v2
 
-	- name: Deploy for ${{ matrix.user }}
-		uses: appleboy/ssh-action@v1.0.3
-		with:
-		host: ${{ secrets.HOST }}
-		username: ${{ secrets.USERNAME }}
-		port: 22
-		request_pty: true
-		script_stop: true
-		key: ${{ secrets.KEY }}
-		script: |
-			become ${{ matrix.user }}
-			toolforge jobs flush
-			toolforge jobs load ${{ matrix.user }}-jobs.yaml
+            - name: Deploy for ${{ matrix.user }}
+                uses: appleboy/ssh-action@v1.0.3
+                with:
+                    host: ${{ secrets.HOST }}
+                    username: ${{ secrets.USERNAME }}
+                    port: 22
+                    request_pty: true
+                    script_stop: true
+                    key: ${{ secrets.KEY }}
+                    script: |
+                        become ${{ matrix.user }}
+                        toolforge jobs flush
+                        toolforge jobs load ${{ matrix.user }}-jobs.yaml
