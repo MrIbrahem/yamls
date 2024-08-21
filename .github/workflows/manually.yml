@@ -33,8 +33,7 @@ jobs:
           - sanaa
           - suha
     steps:
-      - uses: actions/checkout@v2
-
       - name: Deploy for ${{ matrix.user }}
+        needs: login
         script: |
           become ${{ matrix.user }} sh -c "toolforge jobs list; toolforge jobs flush; toolforge jobs load ${{ matrix.user }}-jobs.yaml"
