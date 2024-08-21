@@ -2,7 +2,7 @@ name: Restart Jobs
 
 on:
   schedule:
-    - cron: '33 * * * *'
+    - cron: '35 * * * *'
 
 jobs:
   build:
