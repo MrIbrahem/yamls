@@ -1,4 +1,4 @@
-name: Restart.yml
+name: Restart
 on:
   schedule:
     - cron: "22 * * * *"
