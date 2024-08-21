@@ -1,7 +1,7 @@
 name: restart himo
 on:
   schedule:
-    - cron: '53 * * * *'
+    - cron: '1 1 * * *'
 
 jobs:
   build:

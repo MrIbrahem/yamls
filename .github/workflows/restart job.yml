@@ -1,8 +1,7 @@
 name: Restart Jobs
-
 on:
   schedule:
-    - cron: '6 1 * * *'
+    - cron: '1 1 * * *'
 
 jobs:
   build:
