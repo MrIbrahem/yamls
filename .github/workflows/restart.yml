@@ -1,7 +1,7 @@
 name: Restart.yml
 on:
   schedule:
-    - cron: "54 0 * * *"
+    - cron: "4 1 * * *"
 
 jobs:
   build:
@@ -31,3 +31,4 @@ jobs:
             become ${{ matrix.user }}
             toolforge jobs flush
             toolforge jobs load ${{ matrix.user }}-jobs.yaml
+        continue-on-error: false
