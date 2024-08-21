@@ -16,6 +16,7 @@ jobs:
           - nada
           - sanaa
           - suha
+          - mdwiki
     steps:
       - uses: actions/checkout@v2
 
