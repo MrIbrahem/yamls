@@ -32,8 +32,8 @@ jobs:
           - nada
           - sanaa
           - suha
+    needs: login
     steps:
       - name: Deploy for ${{ matrix.user }}
-        needs: login
         run: |
           become ${{ matrix.user }} sh -c "toolforge jobs list; toolforge jobs flush; toolforge jobs load ${{ matrix.user }}-jobs.yaml"
