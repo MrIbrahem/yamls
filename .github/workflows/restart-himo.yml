@@ -20,6 +20,5 @@ jobs:
           script_stop: true
           key: ${{ secrets.KEY }}
           script: |
-            become himo
-            toolforge jobs flush
-            toolforge jobs load himo-jobs.yaml
+            become himo sh -c "toolforge jobs list; toolforge jobs flush; toolforge jobs load himo-jobs.yaml"
+
