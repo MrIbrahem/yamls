@@ -1,8 +1,6 @@
 name: Manually Restart
 
 on:
-  branches:
-    - main
   # start manually
   workflow_dispatch:
 
