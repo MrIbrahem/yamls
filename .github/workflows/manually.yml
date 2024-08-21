@@ -4,25 +4,9 @@ on:
   # start manually
   workflow_dispatch:
 
-
 jobs:
-  login:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: SSH Login
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: 22
-          request_pty: true
-          key: ${{ secrets.KEY }}
-
   build:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         user:
@@ -32,8 +16,17 @@ jobs:
           - nada
           - sanaa
           - suha
-    needs: login
     steps:
+      - uses: actions/checkout@v2
+
       - name: Deploy for ${{ matrix.user }}
-        run: |
-          become ${{ matrix.user }} sh -c "toolforge jobs list; toolforge jobs flush; toolforge jobs load ${{ matrix.user }}-jobs.yaml"
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: 22
+          request_pty: true
+          script_stop: true
+          key: ${{ secrets.KEY }}
+          script: |
+            become ${{ matrix.user }} sh -c "toolforge jobs list; toolforge jobs flush; toolforge jobs load ${{ matrix.user }}-jobs.yaml"
