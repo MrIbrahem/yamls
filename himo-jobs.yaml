@@ -25,10 +25,11 @@
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/illwd2 -ns:0,10 main3
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/ill2 -newpages:100 ill2
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/new
 
 - name: ili
   command: "$HOME/tfj_shs/ili.sh"
-  schedule: "*/3 * * * *"
+  schedule: "@hourly"
   image: tf-python39
   emails: none
 
