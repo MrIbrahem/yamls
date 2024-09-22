@@ -29,6 +29,12 @@
   image: python3.9
   emails: none
 
+- name: nldes3
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py neq/nldes3 a2r sparql:Q13442814,Q13433827,Q265158,Q191067,Q19389637,Q953806 all:1000 doar"
+  schedule: '@daily'
+  image: python3.9
+  emails: none
+
 #a أوصاف الأشخاص
 - name: peonew3
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py people/new3 limit:1000"
