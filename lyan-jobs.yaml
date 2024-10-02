@@ -7,6 +7,7 @@
 
 # $HOME/local/bin/python3 $HOME/core8/pwb.py mkn/nat en -sqllimit:200
 # $HOME/local/bin/python3 $HOME/core8/pwb.py mkn/a o:sql2
+# tfj run mkn2 --mem 1Gi --image python3.9 --command "$HOME/shs/mkn2.sh"
 - name: mkna1
   command: "/data/project/himo/tfj_shs/mkn.sh"
   schedule: '1 1 * * *'
