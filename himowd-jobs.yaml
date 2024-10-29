@@ -44,7 +44,7 @@
 
 - name: fam
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py des/fam"
-  schedule: '5 * * * *'
+  schedule: '5 1 * * *'
   #mem: 1Gi
   #cpu: 2
   image: python3.9
