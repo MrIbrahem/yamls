@@ -16,7 +16,7 @@
 
 # a تسميات
 - name: clabels
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py alabel/labels limit:100"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py alabel/labels limit:1000"
   schedule: '52 * * * *'
   image: python3.9
   emails: none
