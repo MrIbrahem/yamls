@@ -5,12 +5,6 @@
 # $HOME/local/bin/python3 $HOME/c8/pwb.py templatecount/linknew -ref:قالب:استخدام_واسع
 # $HOME/local/bin/python3 $HOME/c8/pwb.py templatecount/linknew -page:ويكيبيديا:مشروع_صندوق_معلومات/القائمة_الحالية
 
-- name: rmv
-  command: "$HOME/shs/rmc.sh"
-  schedule: '@hourly'
-  image: bullseye
-  emails: none
-
 # $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1 -portal:اليمن
 # $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1 -portal:سباق_الدراجات_الهوائية
 # $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1000

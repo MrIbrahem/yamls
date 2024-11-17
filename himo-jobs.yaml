@@ -1,14 +1,26 @@
 
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/illwd2 -ns:0,10 main3
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/ill2 -newpages:100 ill2
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/new
 
 - name: ili
   command: "$HOME/tfj_shs/ili.sh"
   schedule: "@hourly"
   image: tf-python39
+  emails: none
+
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/illwd2 -ns:0,10 main3
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/ill2 -newpages:100 ill2
+
+- name: iliwd2
+  command: "$HOME/tfj_shs/iliwd2.sh"
+  schedule: "@hourly"
+  image: tf-python39
+  emails: none
+
+- name: ilinew
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ill/new"
+  schedule: "@hourly"
+  image: python3.9
   emails: none
 
 - name: mvn-cats
