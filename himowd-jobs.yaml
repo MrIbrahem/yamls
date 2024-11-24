@@ -51,7 +51,7 @@
   emails: none
 
 - name: cyclist
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py cy/jsub -cat:تصنيف:سجل_فوز_دراج_من_ويكي_بيانات"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py cy/jsub -cat:تصنيف:سجل_فوز_دراج_من_ويكي_بيانات/قوالب"
   schedule: '@weekly'
   image: python3.9
   emails: none
