@@ -1,4 +1,8 @@
 
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -newpages:50 llang:enfr
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:14 -newpages:50 newway llang:enfr
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -recentchanges:200 llang:enfr
+
 - name: asa1
   command: "/data/project/himo/tfj_shs/asa.sh"
   schedule: '*/3 * * * *'
