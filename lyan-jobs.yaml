@@ -78,3 +78,11 @@
   schedule: "8 8 * * *"
   image: python3.9
   emails: none
+
+# tfj run cdc --image python3.9 --command "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/catar workarcat -links:ويكيبيديا:مشروع_ويكي_الصيانة/التصنيفات_غير_المصنفة"
+
+- name: noncats
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/catar workarcat -links:ويكيبيديا:مشروع_ويكي_الصيانة/التصنيفات_غير_المصنفة"
+  schedule: "@weekly"
+  image: python3.9
+  emails: none

@@ -1,4 +1,10 @@
 
+- name: peopnew
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py nep/si3g_qua returnlab limit:1000"
+  schedule: '30 * * * *'
+  image: python3.9
+  emails: none
+
 - name: rmv
   command: "$HOME/shs/rmc.sh"
   schedule: '@hourly'
