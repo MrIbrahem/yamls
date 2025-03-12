@@ -37,13 +37,13 @@
 
 - name: reff9
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py refn/r -ns:0,10 -recentchanges:50"
-  schedule: '*/3 * * * *'
+  schedule: '*/30 * * * *'
   image: python3.9
   emails: none
 
 - name: tmpcat4
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:0 -recentchanges:50 && $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -newpages2:50"
-  schedule: '*/3 * * * *'
+  schedule: '*/20 * * * *'
   image: python3.9
   emails: none
 
