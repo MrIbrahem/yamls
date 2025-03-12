@@ -15,13 +15,13 @@
 
 - name: newall-1
   command: "$HOME/pyvenv/bin/python3 $HOME/core8/pwb.py new_all/bot -ns:0 -newpages2:100 getred ili"
-  schedule: '*/3 * * * *'
+  schedule: '20 * * * *'
   image: python3.9
   emails: none
 
 - name: newall-2
   command: "$HOME/pyvenv/bin/python3 $HOME/core8/pwb.py new_all/bot -ns:0 -recentchanges:100"
-  schedule: '*/3 * * * *'
+  schedule: '20 * * * *'
   image: python3.9
   emails: none
 
@@ -57,6 +57,6 @@
 
 - name: portals3
   command: "$HOME/pyvenv/bin/python3 $HOME/c8/pwb.py portal/po -lange:enfr -newpages2:100"
-  schedule: '*/3 * * * *'
+  schedule: '30 * * * *'
   image: python3.9
   emails: none
