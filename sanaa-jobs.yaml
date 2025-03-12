@@ -5,7 +5,7 @@
 
 - name: asa1
   command: "/data/project/himo/tfj_shs/asa.sh"
-  schedule: '*/3 * * * *'
+  schedule: '*/20 * * * *'
   image: tf-python39
   emails: none
 
@@ -68,6 +68,6 @@
 
 - name: mvcat
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvn/mvnew multixx"
-  schedule: '*/4 * * * *'
+  schedule: '*/40 * * * *'
   image: python3.9
   emails: none
