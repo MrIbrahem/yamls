@@ -33,6 +33,7 @@
 
 # $HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 ppp:qq PP31 P17
 # $HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 ppp:تصنيف:بذرة_أعلام P27 P106
+# python3 core8/pwb.py stub/p27 country:all PP31 P31 P106
 - name: stbpp31
   command: "/data/project/himo/tfj_shs/stub_p27.sh"
   schedule: '5 3 * * *'
@@ -40,7 +41,6 @@
   #cpu: 2
   image: tf-python39
   emails: none
-
 # $HOME/local/bin/python3 $HOME/core8/pwb.py stub/wd b2 wikidata:bio cat:تصنيف:بذرة_أعلام limit:2000
 # $HOME/local/bin/python3 $HOME/core8/pwb.py stub/wd b2 new:تصنيف:بذرة numbs:300
 
@@ -70,7 +70,7 @@
   emails: none
 
 - name: stbbio1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/b2 new:تصنيف:بذرة_أعلام P106 withnoflage numbs:300 noflag"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/b2_new new:تصنيف:بذرة_أعلام P106 withnoflage numbs:300 noflag"
   schedule: '7 7 * * *'
   mem: 1Gi
   #cpu: 2
