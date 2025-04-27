@@ -7,7 +7,7 @@
 # s إنشاء التصانيف
 - name: nchng
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/scat -ns:0,10 -recentchanges:100"
-  schedule: '*/3 * * * *'
+  schedule: '*/20 * * * *'
   mem: 1Gi
   #cpu: 2
   image: python3.9
@@ -15,7 +15,7 @@
 
 - name: ennew
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/ennew -depth:4 -range:6 -newpages:200"
-  schedule: '*/2 * * * *'
+  schedule: '*/30 * * * *'
   mem: 1Gi
   #cpu: 2
   image: python3.9
@@ -24,7 +24,7 @@
 # s إنشاء التصانيف
 - name: nchng2
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/scat -depth:6 -ns:0 -newpages2:50"
-  schedule: '*/3 * * * *'
+  schedule: '*/20 * * * *'
   mem: 1Gi
   #cpu: 2
   image: python3.9
@@ -32,7 +32,7 @@
 
 - name: scat1
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/scat -depth:6 -ns:14 -newpages:20"
-  schedule: '*/3 * * * *'
+  schedule: '*/20 * * * *'
   mem: 1Gi
   #cpu: 2
   image: python3.9
@@ -40,7 +40,7 @@
 
 - name: scat2
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/scat -range:6 -depth:6 -pageinnewcat:20"
-  schedule: '*/3 * * * *'
+  schedule: '*/20 * * * *'
   mem: 1Gi
   #cpu: 2
   image: python3.9
