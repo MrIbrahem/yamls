@@ -35,13 +35,13 @@
 
 - name: bbio1
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/bio sql"
-  schedule: '36 * * * *'
+  schedule: '36 2 * * *'
   image: python3.9
   emails: none
 
 - name: bbio2
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/bio -qudda:io"
-  schedule: '36 * * * *'
+  schedule: '36 1 * * *'
   image: python3.9
   emails: none
 
