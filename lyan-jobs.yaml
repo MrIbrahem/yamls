@@ -1,4 +1,3 @@
-
 - name: rmv
   command: "$HOME/shs/rmc.sh"
   schedule: '@hourly'
@@ -18,7 +17,7 @@
 
 - name: ennew1
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/ennew_24 -depth:5"
-  schedule: '*/30 * * * *'
+  schedule: '2 1 * * *'
   mem: 1Gi
   #cpu: 2
   image: python3.9
@@ -51,19 +50,19 @@
 
 - name: caa8
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/cat -depth:4 -range:6 -newpages2:100"
-  schedule: '*/20 * * * *'
+  schedule: '40 * * * *'
   image: python3.9
   emails: none
 
 - name: ncr1
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/newcat -ns:14 -newpages:30 usesql"
-  schedule: '*/25 * * * *'
+  schedule: '35 * * * *'
   image: python3.9
   emails: none
 
 - name: ncr2
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/newcat -ns:14 -newpages:20"
-  schedule: '*/35 * * * *'
+  schedule: '55 * * * *'
   image: python3.9
   emails: none
 

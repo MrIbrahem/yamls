@@ -2,6 +2,18 @@
 # $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:14 -newpages:50 newway llang:enfr
 # $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -recentchanges:200 llang:enfr
 
+- name: mvcat
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvn/mvnew multixx"
+  schedule: '*/40 * * * *'
+  image: python3.9
+  emails: none
+
+- name: rmv
+  command: "$HOME/shs/rmc.sh"
+  schedule: '@hourly'
+  image: bullseye
+  emails: none
+
 - name: asa1
   command: "/data/project/himo/tfj_shs/asa.sh"
   schedule: '*/20 * * * *'
@@ -62,11 +74,5 @@
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/infobox"
   schedule: '4 4 * * *'
   mem: 1Gi
-  image: python3.9
-  emails: none
-
-- name: mvcat
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvn/mvnew multixx"
-  schedule: '*/40 * * * *'
   image: python3.9
   emails: none

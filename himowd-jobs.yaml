@@ -11,14 +11,13 @@
   image: bullseye
   emails: none
 
-- name: dumps
-  command: "/data/project/himo/bots/dump_core/dump3/dump.sh"
-  schedule: '6 6 * * 1'
-  #mem: 2Gi
-  #cpu: 2
-  image: tf-python39
-  emails: none
-
+# - name: dumps
+#   command: "/data/project/himo/bots/dump_core/dump3/dump.sh"
+#   schedule: '6 6 * * 1'
+#   #mem: 2Gi
+#   #cpu: 2
+#   image: tf-python39
+#   emails: none
 
 # a تسميات
 - name: clabels
@@ -31,7 +30,7 @@
 # tfj run cdc --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py nep/si3g -newpages:4000 save"
 - name: newp3
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py nep/si3g -newpages:400 save"
-  schedule: '*/15 * * * *'
+  schedule: '20 * * * *'
   image: python3.9
   emails: none
 
@@ -64,6 +63,6 @@
 
 - name: wdlnk
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:0,14 -newpages:150 && $HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:14 -usernewpages:Mr.Ibrahembot"
-  schedule: '*/20 * * * *'
+  schedule: '33 * * * *'
   image: python3.9
   emails: none
