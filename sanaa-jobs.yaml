@@ -3,7 +3,7 @@
 # $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -recentchanges:200 llang:enfr
 
 
-# tfj run mvnew1 --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py mvn/mvnew"
+# tfj run mvnew1 --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py new_mv_cats/bot #mvn/mvnew"
 - name: mvcat
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py new_mv_cats/bot"
   schedule: '*/40 * * * *'
