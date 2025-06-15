@@ -5,7 +5,7 @@
 
 # tfj run mvnew1 --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py new_mvcats/bot #mvn/mvnew"
 - name: mvcat
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py new_mvcats/bot wikiapi_new""
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py new_mvcats/bot wikiapi_new"
   schedule: '*/40 * * * *'
   image: python3.9
   emails: none
