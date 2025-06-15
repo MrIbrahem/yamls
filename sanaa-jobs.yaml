@@ -1,7 +1,24 @@
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -newpages:50 llang:enfr
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:14 -newpages:50 newway llang:enfr
+# $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -recentchanges:200 llang:enfr
+
+
+# tfj run mvnew1 --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py new_mvcats/bot #mvn/mvnew"
+- name: mvcat
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py new_mvcats/bot wikiapi_new"
+  schedule: '*/40 * * * *'
+  image: python3.9
+  emails: none
+
+- name: rmv
+  command: "$HOME/shs/rmc.sh"
+  schedule: '@hourly'
+  image: bullseye
+  emails: none
 
 - name: asa1
   command: "/data/project/himo/tfj_shs/asa.sh"
-  schedule: '*/3 * * * *'
+  schedule: '*/20 * * * *'
   image: tf-python39
   emails: none
 
@@ -32,13 +49,13 @@
 
 - name: bbio1
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/bio sql"
-  schedule: '36 * * * *'
+  schedule: '36 2 * * *'
   image: python3.9
   emails: none
 
 - name: bbio2
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/bio -qudda:io"
-  schedule: '36 * * * *'
+  schedule: '36 1 * * *'
   image: python3.9
   emails: none
 
