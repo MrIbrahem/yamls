@@ -41,10 +41,12 @@
   image: python3.9
   emails: none
 
+# $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:0 -recentchanges:50
+# $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -newpages2:50
 - name: tmpcat4
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:0 -recentchanges:50 && $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -newpages2:50"
+  command: "$HOME/tfj_shs/tmpcat.sh"
   schedule: '*/20 * * * *'
-  image: python3.9
+  image: tf-python39
   emails: none
 
 - name: temp2-cat

@@ -61,8 +61,10 @@
   image: python3.9
   emails: none
 
+# $HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:0,14 -newpages:150
+# $HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:14 -usernewpages:Mr.Ibrahembot
 - name: wdlnk
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:0,14 -newpages:150 && $HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:14 -usernewpages:Mr.Ibrahembot"
+  command: "$HOME/shs/wdlnk.sh"
   schedule: '33 * * * *'
-  image: python3.9
+  image: tf-python39
   emails: none

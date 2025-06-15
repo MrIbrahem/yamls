@@ -58,12 +58,14 @@
   emails: none
 
 #a مرة في اليوم
+# $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/sug
+# $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/params_report
 - name: arwkisg
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/sug && $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/params_report"
+  command: "$HOME/shs/wdlnk.sh"
   schedule: '1 1 * * *'
   mem: 1Gi
   #cpu: 2
-  image: python3.9
+  image: tf-python39
   emails: none
 
 - name: stbsql2
