@@ -20,11 +20,11 @@
 #   emails: none
 
 # a تسميات
-- name: clabels
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py alabel/labels limit:1000"
-  schedule: '52 * * * *'
-  image: python3.9
-  emails: none
+# - name: clabels
+  # command: "$HOME/local/bin/python3 $HOME/core8/pwb.py alabel/labels limit:1000"
+  # schedule: '52 * * * *'
+  # image: python3.9
+  # emails: none
 
 #a أوصاف الصفحات الجديدة تصانيف اسم عائلة - اسم اول - مركب كميائي - قائمة ويكيميديا
 # tfj run cdc --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py nep/si3g -newpages:4000 save"
