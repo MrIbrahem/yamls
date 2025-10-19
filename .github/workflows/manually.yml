@@ -30,4 +30,4 @@ jobs:
           script_stop: true
           key: ${{ secrets.KEY }}
           script: |
-            become ${{ matrix.user }} sh -c "toolforge jobs list; toolforge jobs flush; toolforge jobs load ${{ matrix.user }}-jobs.yaml"
+            become ${{ matrix.user }} bash -lc "toolforge-jobs list; toolforge-jobs flush; toolforge-jobs load ${{ matrix.user }}-jobs.yaml"
