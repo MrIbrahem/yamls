@@ -1,4 +1,10 @@
 
+- name: search
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/search_cats"
+  schedule: "@daily"
+  image: python3.9
+  emails: none
+
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3
 
@@ -24,7 +30,7 @@
   emails: none
 
 - name: mvn-cats
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvn/cats"
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvn_cats/bot"
   schedule: '@weekly'
   image: python3.9
   emails: none
