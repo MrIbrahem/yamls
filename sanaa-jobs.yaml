@@ -2,79 +2,77 @@
 # $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:14 -newpages:50 newway llang:enfr
 # $HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -recentchanges:200 llang:enfr
 
-
-# tfj run mvnew1 --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py mvcats_new/bot #mvn/mvnew"
+# tfj run mvnew1 --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py mvcats_bot"
 - name: mvcat
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvcats_new/bot"
-  schedule: '*/40 * * * *'
+  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvcats_bot"
+  schedule: "*/40 * * * *"
   image: python3.9
   emails: none
 
 - name: rmv
   command: "$HOME/shs/rmc.sh"
-  schedule: '@hourly'
+  schedule: "@hourly"
   image: bullseye
   emails: none
 
 - name: asa1
   command: "/data/project/himo/tfj_shs/asa.sh"
-  schedule: '*/20 * * * *'
+  schedule: "*/20 * * * *"
   image: tf-python39
   emails: none
 
-
 - name: weeklyx
   command: "/data/project/himo/tfj_shs/weekly.sh"
-  schedule: '@weekly'
+  schedule: "@weekly"
   image: tf-python39
   emails: none
 
 - name: asaproj
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py asa/lists/main_projr"
-  schedule: '1 1 * * *'
+  schedule: "1 1 * * *"
   image: python3.9
   emails: none
 
 - name: asapages
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py asapages/bot"
-  schedule: '1 * * * *'
+  schedule: "1 * * * *"
   image: python3.9
   emails: none
 
 - name: dailyas
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/ssql main3 sqladdclass limit:3000 llang:enfr"
-  schedule: '5 3 * * *'
+  schedule: "5 3 * * *"
   image: python3.9
   emails: none
 
 - name: bbio1
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/bio sql"
-  schedule: '36 2 * * *'
+  schedule: "36 2 * * *"
   image: python3.9
   emails: none
 
 - name: bbio2
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/bio -qudda:io"
-  schedule: '36 1 * * *'
+  schedule: "36 1 * * *"
   image: python3.9
   emails: none
 
 - name: asalist
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/ass4_gen main3 -cat:تصنيف:مقالات_بحاجة_لمراجعة_الصنف"
-  schedule: '40 */5 * * *'
+  schedule: "40 */5 * * *"
   image: python3.9
   emails: none
 
 - name: axera1
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/cate addpro allxer"
-  schedule: '4 4 * * *'
+  schedule: "4 4 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
 - name: axera2
   command: "$HOME/local/bin/python311 $HOME/c8/pwb.py asa/infobox"
-  schedule: '4 4 * * *'
+  schedule: "4 4 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
