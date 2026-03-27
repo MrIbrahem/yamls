@@ -13,6 +13,12 @@
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3
 
+- name: owid
+  command: "$HOME/OWID-categories/owid_task.sh"
+  schedule: "@weekly"
+  image: tf-python39
+  emails: none
+
 - name: ili
   command: "$HOME/tfj_shs/ili.sh"
   schedule: "@hourly"
@@ -48,7 +54,7 @@
 
 - name: reff9
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py refn/r -ns:0,10 -recentchanges:50"
-  schedule: "*/30 * * * *"
+  schedule: "*/20 * * * *"
   image: python3.9
   emails: none
 
