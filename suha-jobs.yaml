@@ -1,4 +1,3 @@
-
 # $HOME/local/bin/python3 $HOME/c8/pwb.py prope/prop6
 # $HOME/local/bin/python3 $HOME/c8/pwb.py prop/prop4 -ns:10 -ref:قالب:يستخدم_ويكي_بيانات2
 # $HOME/local/bin/python3 $HOME/c8/pwb.py prop/prop4 -ns:10 -ref:قالب:قيمة_ويكي_بيانات
@@ -16,13 +15,13 @@
 
 - name: prtals
   command: "$HOME/tfj_shs/portals.sh"
-  schedule: '@weekly'
+  schedule: "@weekly"
   image: tf-python39
   emails: none
 
 - name: rmv
   command: "$HOME/shs/rmc.sh"
-  schedule: '@hourly'
+  schedule: "@hourly"
   image: bullseye
   emails: none
 
@@ -31,17 +30,16 @@
 # $HOME/local/bin/python3 $HOME/core8/pwb.py cite/reff -ns:0 -recentchanges:50
 - name: refacol2
   command: "/data/project/himo/tfj_shs/reff.sh"
-  schedule: '*/15 * * * *'
+  schedule: "*/15 * * * *"
   image: tf-python39
   emails: none
-
 
 # $HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 ppp:qq PP31 P17
 # $HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 ppp:تصنيف:بذرة_أعلام P27 P106
 # python3 core8/pwb.py stub/p27 country:all PP31 P31 P106
 - name: stbpp31
   command: "/data/project/himo/tfj_shs/stub_p27.sh"
-  schedule: '5 3 * * *'
+  schedule: "5 3 * * *"
   mem: 1Gi
   #cpu: 2
   image: tf-python39
@@ -51,7 +49,7 @@
 
 - name: stubwd
   command: "/data/project/himo/tfj_shs/stub_wd.sh"
-  schedule: '5 3 * * *'
+  schedule: "5 3 * * *"
   mem: 1Gi
   #cpu: 2
   image: tf-python39
@@ -62,7 +60,7 @@
 # $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/params_report
 - name: arwkisg
   command: "$HOME/shs/wdlnk.sh"
-  schedule: '1 1 * * *'
+  schedule: "1 1 * * *"
   mem: 1Gi
   #cpu: 2
   image: tf-python39
@@ -70,7 +68,7 @@
 
 - name: stbsql2
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/stubsql"
-  schedule: '5 3 * * *'
+  schedule: "5 3 * * *"
   mem: 1Gi
   #cpu: 2
   image: python3.9
@@ -78,7 +76,7 @@
 
 - name: stbbio1
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/b2_new new:تصنيف:بذرة_أعلام P106 withnoflage numbs:300 noflag"
-  schedule: '7 7 * * *'
+  schedule: "7 7 * * *"
   mem: 1Gi
   #cpu: 2
   image: python3.9
