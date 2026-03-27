@@ -1,13 +1,12 @@
-
 - name: peopnew
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py nep/si3g_qua returnlab limit:1000"
-  schedule: '30 * * * *'
+  schedule: "30 * * * *"
   image: python3.9
   emails: none
 
 - name: rmv
   command: "$HOME/shs/rmc.sh"
-  schedule: '@hourly'
+  schedule: "@hourly"
   image: bullseye
   emails: none
 
@@ -20,36 +19,36 @@
 #   emails: none
 
 # a تسميات
-# - name: clabels
-  # command: "$HOME/local/bin/python3 $HOME/core8/pwb.py alabel/labels limit:1000"
-  # schedule: '52 * * * *'
-  # image: python3.9
-  # emails: none
+- name: clabels
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py alabel/labels limit:1000"
+  schedule: "52 * * * *"
+  image: python3.9
+  emails: none
 
 #a أوصاف الصفحات الجديدة تصانيف اسم عائلة - اسم اول - مركب كميائي - قائمة ويكيميديا
 # tfj run cdc --image python3.9 --command "$HOME/local/bin/python3 core8/pwb.py nep/si3g -newpages:4000 save"
 - name: newp3
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py nep/si3g -newpages:400 save"
-  schedule: '20 * * * *'
+  schedule: "20 * * * *"
   image: python3.9
   emails: none
 
 - name: nldes3
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py neq/nldes3 a2r sparql:Q13442814,Q13433827,Q265158,Q191067,Q19389637,Q953806 all:1000 doar"
-  schedule: '@daily'
+  schedule: "@daily"
   image: python3.9
   emails: none
 
 #a أوصاف الأشخاص
 - name: peonew3
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py people/new3 limit:1000"
-  schedule: '1 */6 * * *'
+  schedule: "1 */6 * * *"
   image: python3.9
   emails: none
 
 - name: fam
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py des/fam"
-  schedule: '5 1 * * *'
+  schedule: "5 1 * * *"
   #mem: 1Gi
   #cpu: 2
   image: python3.9
@@ -57,7 +56,7 @@
 
 - name: cyclist
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py cy/jsub -cat:تصنيف:سجل_فوز_دراج_من_ويكي_بيانات/قوالب"
-  schedule: '@weekly'
+  schedule: "@weekly"
   image: python3.9
   emails: none
 
@@ -65,6 +64,6 @@
 # $HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:14 -usernewpages:Mr.Ibrahembot
 - name: wdlnk
   command: "$HOME/shs/wdlnk.sh"
-  schedule: '33 * * * *'
+  schedule: "33 * * * *"
   image: tf-python39
   emails: none
