@@ -46,12 +46,16 @@
   image: python3.9
   emails: none
 
-# $HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:0,14 -newpages:150
-# $HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:14 -usernewpages:Mr.Ibrahembot
-- name: wdlnk
-  command: "$HOME/shs/wdlnk.sh"
+- name: wdlnk-1
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:0,14 -newpages:150"
   schedule: "33 * * * *"
-  image: tf-python39
+  image: python3.9
+  emails: none
+
+- name: wdlnk-2
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py wd_link/wdlink -ns:14 -usernewpages:Mr.Ibrahembot"
+  schedule: "33 * * * *"
+  image: python3.9
   emails: none
 # - name: dumps
 #   command: "/data/project/himo/bots/dump_core/dump3/dump.sh"

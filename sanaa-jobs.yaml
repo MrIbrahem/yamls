@@ -1,70 +1,91 @@
-
 - name: asaproj
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py asa/lists/main_projr"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py asa/lists/main_projr"
   schedule: "1 1 * * *"
   image: python3.9
   emails: none
 
 - name: asapages
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py asapages/bot"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py asapages/bot"
   schedule: "1 * * * *"
   image: python3.9
   emails: none
 
 - name: dailyas
-  command: "$HOME/local/bin/python311 $HOME/core8/pwb.py asa/ssql main3 sqladdclass limit:3000 llang:enfr"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/ssql main3 sqladdclass limit:3000 llang:enfr"
   schedule: "5 3 * * *"
   image: python3.9
   emails: none
 
 - name: bbio1
-  command: "$HOME/local/bin/python311 $HOME/core8/pwb.py asa/bio sql"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/bio sql"
   schedule: "36 2 * * *"
   image: python3.9
   emails: none
 
 - name: bbio2
-  command: "$HOME/local/bin/python311 $HOME/core8/pwb.py asa/bio -qudda:io"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/bio -qudda:io"
   schedule: "36 1 * * *"
   image: python3.9
   emails: none
 
 - name: asalist
-  command: "$HOME/local/bin/python311 $HOME/core8/pwb.py asa/ass4_gen main3 -cat:تصنيف:مقالات_بحاجة_لمراجعة_الصنف"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/ass4_gen main3 -cat:تصنيف:مقالات_بحاجة_لمراجعة_الصنف"
   schedule: "40 */5 * * *"
   image: python3.9
   emails: none
 
 - name: axera1
-  command: "$HOME/local/bin/python311 $HOME/core8/pwb.py asa/cate addpro allxer"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/cate addpro allxer"
   schedule: "4 4 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
 - name: axera2
-  command: "$HOME/local/bin/python311 $HOME/core8/pwb.py asa/infobox"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/infobox"
   schedule: "4 4 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
-# $HOME/local/bin/python311 $HOME/core8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -newpages:50 llang:enfr
-# $HOME/local/bin/python311 $HOME/core8/pwb.py asa/ass4_gen main3 -ns:14 -newpages:50 newway llang:enfr
-# $HOME/local/bin/python311 $HOME/core8/pwb.py asa/ass4_gen main3 -ns:0,10,14 -recentchanges:200 llang:enfr
-
-- name: asa1
-  command: "/data/project/himo/tfj_shs/asa.sh"
+- name: asa-1
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/ass4_gen main3 -ns:0,10,14 -newpages:50 llang:enfr"
   schedule: "*/20 * * * *"
-  image: tf-python39
+  image: python3.9
   emails: none
 
-# $HOME/local/bin/python3 $HOME/core8/pwb.py asapages/bot2
-# $HOME/local/bin/python311 $HOME/core8/pwb.py asa/import project:all
-# $HOME/local/bin/python311 $HOME/core8/pwb.py asa1/as_by_project all
-# $HOME/local/bin/python311 $HOME/core8/pwb.py asa1/assu
-- name: weeklyx
-  command: "/data/project/himo/tfj_shs/weekly.sh"
+- name: asa-2
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/ass4_gen main3 -ns:14 -newpages:50 newway llang:enfr"
+  schedule: "*/20 * * * *"
+  image: python3.9
+  emails: none
+
+- name: asa-3
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/ass4_gen main3 -ns:0,10,14 -recentchanges:200 llang:enfr"
+  schedule: "*/20 * * * *"
+  image: python3.9
+  emails: none
+
+- name: weekly-1
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py asapages/bot2"
   schedule: "@weekly"
-  image: tf-python39
+  image: python3.9
+  emails: none
+
+- name: weekly-2"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa/import project:all"
+  schedule: "@weekly"
+  image: python3.9
+  emails: none
+
+- name: weekly-3"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa1/as_by_project all"
+  schedule: "@weekly"
+  image: python3.9
+  emails: none
+
+- name: weekly-4"
+  command: "$HOME/local/bin/python311 $HOME/c9/pwb.py asa1/assu"
+  schedule: "@weekly"
+  image: python3.9
   emails: none

@@ -74,12 +74,16 @@
   image: python3.9
   emails: none
 
-# $HOME/local/bin/python3 $HOME/core8/pwb.py mkn/nat en -sqllimit:200
-# $HOME/local/bin/python3 $HOME/core8/pwb.py mkn/a o:sql2
-# tfj run mkn2 --mem 1Gi --image python3.9 --command "$HOME/shs/mkn2.sh"
-- name: mkna1
-  command: "/data/project/himo/tfj_shs/mkn.sh"
+- name: mkn-1
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py mkn/nat en -sqllimit:200"
   schedule: "1 1 * * *"
   mem: 1Gi
-  image: tf-python39
+  image: python3.9
+  emails: none
+
+- name: mkn-2
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py mkn/a all_o_keys"
+  schedule: "1 1 * * *"
+  mem: 1Gi
+  image: python3.9
   emails: none

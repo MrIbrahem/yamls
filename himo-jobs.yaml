@@ -46,28 +46,38 @@
   image: python3.9
   emails: none
 
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3
+- name: ili1
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3"
+  schedule: "@hourly"
+  image: python3.9
+  emails: none
 
-- name: ili
-  command: "$HOME/tfj_shs/ili.sh"
+- name: ili2
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3"
+  schedule: "@hourly"
+  image: python3.9
+  emails: none
+
+- name: iliwd2-1
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ill/illwd2 -ns:0,10 main3"
   schedule: "@hourly"
   image: tf-python39
   emails: none
 
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/illwd2 -ns:0,10 main3
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/ill2 -newpages:100 ill2
-
-- name: iliwd2
-  command: "$HOME/tfj_shs/iliwd2.sh"
+- name: iliwd2-2
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ill/ill2 -newpages:100 ill2"
   schedule: "@hourly"
   image: tf-python39
   emails: none
 
-# $HOME/local/bin/python3 $HOME/core8/pwb.py catsn/tempcat -ns:0 -recentchanges:50
-# $HOME/local/bin/python3 $HOME/core8/pwb.py catsn/tempcat -newpages2:50
-- name: tmpcat4
-  command: "$HOME/tfj_shs/tmpcat.sh"
+- name: tmpcat-1
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py catsn/tempcat -ns:0 -recentchanges:50"
+  schedule: "*/20 * * * *"
+  image: tf-python39
+  emails: none
+
+- name: tmpcat-2
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py catsn/tempcat -newpages2:50"
   schedule: "*/20 * * * *"
   image: tf-python39
   emails: none
