@@ -1,3 +1,9 @@
+- name: rmv
+  command: "$HOME/shs/rmc.sh"
+  schedule: "@hourly"
+  image: bullseye
+  emails: none
+
 - name: search
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/search_cats"
   schedule: "@daily"

@@ -4,12 +4,6 @@
   image: python3.9
   emails: none
 
-- name: rmv
-  command: "$HOME/shs/rmc.sh"
-  schedule: "@hourly"
-  image: bullseye
-  emails: none
-
 # - name: dumps
 #   command: "/data/project/himo/bots/dump_core/dump3/dump.sh"
 #   schedule: '6 6 * * 1'

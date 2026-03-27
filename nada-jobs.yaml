@@ -1,8 +1,3 @@
-- name: rmv
-  command: "$HOME/shs/rmc.sh"
-  schedule: "@hourly"
-  image: bullseye
-  emails: none
 
 # toolforge-jobs run teete --command "$HOME/local/bin/python3 -v" --image python3.9
 

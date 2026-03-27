@@ -8,12 +8,6 @@
   image: python3.9
   emails: none
 
-- name: rmv
-  command: "$HOME/shs/rmc.sh"
-  schedule: "@hourly"
-  image: bullseye
-  emails: none
-
 - name: asa1
   command: "/data/project/himo/tfj_shs/asa.sh"
   schedule: "*/20 * * * *"

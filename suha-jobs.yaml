@@ -1,28 +1,21 @@
-# $HOME/local/bin/python3 $HOME/c8/pwb.py prope/prop6
-# $HOME/local/bin/python3 $HOME/c8/pwb.py prop/prop4 -ns:10 -ref:قالب:يستخدم_ويكي_بيانات2
-# $HOME/local/bin/python3 $HOME/c8/pwb.py prop/prop4 -ns:10 -ref:قالب:قيمة_ويكي_بيانات
-# $HOME/local/bin/python3 $HOME/c8/pwb.py templatecount/linknew -ref:قالب:استخدام_واسع
-# $HOME/local/bin/python3 $HOME/c8/pwb.py templatecount/linknew -page:ويكيبيديا:مشروع_صندوق_معلومات/القائمة_الحالية
-
-#- name: prope
-#  command: "/data/project/himo/tfj_shs/prope.sh"
-#  schedule: '@weekly'
-#  image: tf-python39
-#  emails: none
+#a مرة في اليوم
+# $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/sug
+# $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/params_report
+- name: arwkisg
+  command: "$HOME/shs/arwkisg.sh"
+  schedule: "1 1 * * *"
+  mem: 1Gi
+  #cpu: 2
+  image: tf-python39
+  emails: none
 # $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1 -portal:اليمن
 # $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1 -portal:سباق_الدراجات_الهوائية
 # $HOME/local/bin/python3 $HOME/c8/pwb.py portalpages/ss numbs:1000
 
 - name: prtals
-  command: "$HOME/tfj_shs/portals.sh"
+  command: "/data/project/himo/tfj_shs/portals.sh"
   schedule: "@weekly"
   image: tf-python39
-  emails: none
-
-- name: rmv
-  command: "$HOME/shs/rmc.sh"
-  schedule: "@hourly"
-  image: bullseye
   emails: none
 
 # $HOME/local/bin/python3 $HOME/core8/pwb.py cite/reff makenewarchive -ns:0 -recentchanges:1000
@@ -50,17 +43,6 @@
 - name: stubwd
   command: "/data/project/himo/tfj_shs/stub_wd.sh"
   schedule: "5 3 * * *"
-  mem: 1Gi
-  #cpu: 2
-  image: tf-python39
-  emails: none
-
-#a مرة في اليوم
-# $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/sug
-# $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/params_report
-- name: arwkisg
-  command: "$HOME/shs/wdlnk.sh"
-  schedule: "1 1 * * *"
   mem: 1Gi
   #cpu: 2
   image: tf-python39
