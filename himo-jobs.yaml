@@ -4,51 +4,33 @@
   image: bullseye
   emails: none
 
-- name: search
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/search_cats"
-  schedule: "@daily"
-  image: python3.9
-  emails: none
-
 - name: unusedcats
   command: "$HOME/local/bin/python3 ~/bots/UnusedCategories/unused_categories_bot.py"
   schedule: "@daily"
   image: python3.9
   emails: none
 
-- name: ilinew
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ill/new"
-  schedule: "@hourly"
-  image: python3.9
-  emails: none
-
 - name: mvn-cats
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py mvn_cats_bot"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py mv_bots/mvn_cats_bot"
   schedule: "@weekly"
   image: python3.9
   emails: none
 
+- name: mvcat
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py mv_bots/mvcats_bot"
+  schedule: "*/15 * * * *"
+  image: python3.9
+  emails: none
+
 - name: reff1
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py refn/r_page"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py refn/r_page"
   schedule: "1 * * * *"
   image: python3.9
   emails: none
 
 - name: reff9
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py refn/r -ns:0,10 -recentchanges:50"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py refn/r -ns:0,10 -recentchanges:50"
   schedule: "*/20 * * * *"
-  image: python3.9
-  emails: none
-
-- name: temp2-cat
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:10 gen_ar_template -newpages:100"
-  schedule: "20 * * * *"
-  image: python3.9
-  emails: none
-
-- name: portalx
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py portal/lists/lua_to_python"
-  schedule: "@daily"
   image: python3.9
   emails: none
 
@@ -56,6 +38,12 @@
   command: "$HOME/OWID-categories/owid_task.sh"
   schedule: "@weekly"
   image: tf-python39
+  emails: none
+
+- name: ilinew
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ill/new"
+  schedule: "@hourly"
+  image: python3.9
   emails: none
 
 # $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3
@@ -76,10 +64,16 @@
   image: tf-python39
   emails: none
 
-# $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:0 -recentchanges:50
-# $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -newpages2:50
+# $HOME/local/bin/python3 $HOME/core8/pwb.py catsn/tempcat -ns:0 -recentchanges:50
+# $HOME/local/bin/python3 $HOME/core8/pwb.py catsn/tempcat -newpages2:50
 - name: tmpcat4
   command: "$HOME/tfj_shs/tmpcat.sh"
   schedule: "*/20 * * * *"
   image: tf-python39
+  emails: none
+
+- name: temp2-cat
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py catsn/tempcat -ns:10 gen_ar_template -newpages:100"
+  schedule: "20 * * * *"
+  image: python3.9
   emails: none

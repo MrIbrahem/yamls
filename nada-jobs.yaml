@@ -1,4 +1,3 @@
-
 # toolforge-jobs run teete --command "$HOME/local/bin/python3 -v" --image python3.9
 
 - name: auths-del
@@ -20,37 +19,52 @@
   emails: none
 
 - name: badcats
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py arwiki/rm"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/rm"
   schedule: "56 1 * * *"
   image: python3.9
   emails: none
 
 - name: tempname
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py arwiki/temptitle -cat:تصنيف:قوالب_تصفح_باسم_خاطئ"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/temptitle -cat:تصنيف:قوالب_تصفح_باسم_خاطئ"
   schedule: "1 18 * * *"
   image: python3.9
   emails: none
 
 - name: lintlogs1
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py arwiki/lintlog"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/lintlog"
   schedule: "56 1 * * *"
   image: python3.9
   emails: none
 
 - name: redcat
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py arwiki/redcat"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/redcat"
   schedule: "1 1 * * *"
   image: python3.9
   emails: none
 
+#a مرة في اليوم
+- name: arwkisg
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/sug && $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/params_report"
+  schedule: "1 1 * * *"
+  mem: 1Gi
+  #cpu: 2
+  image: python3.9
+  emails: none
+
 - name: portals
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py portal/po -ns:0 2030 -cat:تصنيف:مقالات_بحاجة_لشريط_بوابات"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py portal/po -ns:0 2030 -cat:تصنيف:مقالات_بحاجة_لشريط_بوابات"
   schedule: "5 5 * * *"
   image: python3.9
   emails: none
 
 - name: portals3
-  command: "$HOME/local/bin/python3 $HOME/c8/pwb.py portal/po -lange:enfr -newpages2:100"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py portal/po -lange:enfr -newpages2:100"
   schedule: "*/20 * * * *"
+  image: python3.9
+  emails: none
+
+- name: portalx
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py portal/lists/lua_to_python"
+  schedule: "@daily"
   image: python3.9
   emails: none

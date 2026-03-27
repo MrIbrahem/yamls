@@ -1,3 +1,9 @@
+- name: search
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/search_cats"
+  schedule: "@daily"
+  image: python3.9
+  emails: none
+
 - name: ennew1
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c18/ennew_24 -depth:5"
   schedule: "2 1 * * *"
