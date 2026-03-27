@@ -1,3 +1,19 @@
+- name: stbsql2
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/stubsql"
+  schedule: "5 3 * * *"
+  mem: 1Gi
+  #cpu: 2
+  image: python3.9
+  emails: none
+
+- name: stbbio1
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/b2_new new:تصنيف:بذرة_أعلام P106 withnoflage numbs:300 noflag"
+  schedule: "7 7 * * *"
+  mem: 1Gi
+  #cpu: 2
+  image: python3.9
+  emails: none
+
 #a مرة في اليوم
 # $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/sug
 # $HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/params_report
@@ -46,20 +62,4 @@
   mem: 1Gi
   #cpu: 2
   image: tf-python39
-  emails: none
-
-- name: stbsql2
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/stubsql"
-  schedule: "5 3 * * *"
-  mem: 1Gi
-  #cpu: 2
-  image: python3.9
-  emails: none
-
-- name: stbbio1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/b2_new new:تصنيف:بذرة_أعلام P106 withnoflage numbs:300 noflag"
-  schedule: "7 7 * * *"
-  mem: 1Gi
-  #cpu: 2
-  image: python3.9
   emails: none

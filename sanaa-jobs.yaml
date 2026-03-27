@@ -8,18 +8,6 @@
   image: python3.9
   emails: none
 
-- name: asa1
-  command: "/data/project/himo/tfj_shs/asa.sh"
-  schedule: "*/20 * * * *"
-  image: tf-python39
-  emails: none
-
-- name: weeklyx
-  command: "/data/project/himo/tfj_shs/weekly.sh"
-  schedule: "@weekly"
-  image: tf-python39
-  emails: none
-
 - name: asaproj
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py asa/lists/main_projr"
   schedule: "1 1 * * *"
@@ -68,4 +56,16 @@
   schedule: "4 4 * * *"
   mem: 1Gi
   image: python3.9
+  emails: none
+
+- name: asa1
+  command: "/data/project/himo/tfj_shs/asa.sh"
+  schedule: "*/20 * * * *"
+  image: tf-python39
+  emails: none
+
+- name: weeklyx
+  command: "/data/project/himo/tfj_shs/weekly.sh"
+  schedule: "@weekly"
+  image: tf-python39
   emails: none

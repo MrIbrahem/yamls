@@ -16,30 +16,6 @@
   image: python3.9
   emails: none
 
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3
-
-- name: owid
-  command: "$HOME/OWID-categories/owid_task.sh"
-  schedule: "@weekly"
-  image: tf-python39
-  emails: none
-
-- name: ili
-  command: "$HOME/tfj_shs/ili.sh"
-  schedule: "@hourly"
-  image: tf-python39
-  emails: none
-
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/illwd2 -ns:0,10 main3
-# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/ill2 -newpages:100 ill2
-
-- name: iliwd2
-  command: "$HOME/tfj_shs/iliwd2.sh"
-  schedule: "@hourly"
-  image: tf-python39
-  emails: none
-
 - name: ilinew
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py ill/new"
   schedule: "@hourly"
@@ -64,14 +40,6 @@
   image: python3.9
   emails: none
 
-# $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:0 -recentchanges:50
-# $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -newpages2:50
-- name: tmpcat4
-  command: "$HOME/tfj_shs/tmpcat.sh"
-  schedule: "*/20 * * * *"
-  image: tf-python39
-  emails: none
-
 - name: temp2-cat
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:10 gen_ar_template -newpages:100"
   schedule: "20 * * * *"
@@ -82,4 +50,36 @@
   command: "$HOME/local/bin/python3 $HOME/c8/pwb.py portal/lists/lua_to_python"
   schedule: "@daily"
   image: python3.9
+  emails: none
+
+- name: owid
+  command: "$HOME/OWID-categories/owid_task.sh"
+  schedule: "@weekly"
+  image: tf-python39
+  emails: none
+
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f -ns:10 main3
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/f main3
+
+- name: ili
+  command: "$HOME/tfj_shs/ili.sh"
+  schedule: "@hourly"
+  image: tf-python39
+  emails: none
+
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/illwd2 -ns:0,10 main3
+# $HOME/local/bin/python3 $HOME/core8/pwb.py ill/ill2 -newpages:100 ill2
+
+- name: iliwd2
+  command: "$HOME/tfj_shs/iliwd2.sh"
+  schedule: "@hourly"
+  image: tf-python39
+  emails: none
+
+# $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -ns:0 -recentchanges:50
+# $HOME/local/bin/python3 $HOME/c8/pwb.py catsn/tempcat -newpages2:50
+- name: tmpcat4
+  command: "$HOME/tfj_shs/tmpcat.sh"
+  schedule: "*/20 * * * *"
+  image: tf-python39
   emails: none
