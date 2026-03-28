@@ -67,9 +67,3 @@
   schedule: "*/20 * * * *"
   image: python3.9
   emails: none
-
-- name: portalx
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py portal/lists/lua_to_python"
-  schedule: "@daily"
-  image: python3.9
-  emails: none
