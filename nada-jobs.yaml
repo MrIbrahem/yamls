@@ -30,12 +30,6 @@
   image: python3.9
   emails: none
 
-- name: lintlogs1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/lintlog"
-  schedule: "56 1 * * *"
-  image: python3.9
-  emails: none
-
 - name: redcat
   command: "$HOME/local/bin/python3 $HOME/core8/pwb.py arwiki/redcat"
   schedule: "1 1 * * *"
