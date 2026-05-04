@@ -11,13 +11,13 @@
   emails: none
 
 - name: mvn-cats
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py mv_bots/mvn_cats_bot"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py mv_bots/not_empty_cats_run"
   schedule: "@weekly"
   image: python3.9
   emails: none
 
 - name: mvcat
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py mv_bots/mvcats_bot"
+  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py mv_bots/mvcats_run"
   schedule: "*/15 * * * *"
   image: python3.9
   emails: none
