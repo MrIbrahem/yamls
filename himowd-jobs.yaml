@@ -57,10 +57,3 @@
   schedule: "33 * * * *"
   image: python3.9
   emails: none
-# - name: dumps
-#   command: "/data/project/himo/bots/dump_core/dump3/dump.sh"
-#   schedule: '6 6 * * 1'
-#   #mem: 2Gi
-#   #cpu: 2
-#   image: tf-python39
-#   emails: none
