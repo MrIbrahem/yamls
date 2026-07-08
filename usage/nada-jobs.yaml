@@ -1,62 +1,62 @@
 
 - name: auths-del
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/auths/del"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/auths/del.py"
   schedule: "@weekly"
   image: python3.9
   emails: none
 
 - name: newall-1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/new_all/bot -ns:0 -newpages2:100 getred ili"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/new_all/bot.py -ns:0 -newpages2:100 getred ili"
   schedule: "*/20 * * * *"
   image: python3.9
   emails: none
 
 - name: newall-2
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/new_all/bot -ns:0 -recentchanges:100 archive"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/new_all/bot.py -ns:0 -recentchanges:100 archive"
   schedule: "*/20 * * * *"
   image: python3.9
   emails: none
 
 - name: badcats
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/rm"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/rm.py"
   schedule: "56 1 * * *"
   image: python3.9
   emails: none
 
 - name: tempname
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/temptitle -cat:تصنيف:قوالب_تصفح_باسم_خاطئ"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/temptitle.py -cat:تصنيف:قوالب_تصفح_باسم_خاطئ"
   schedule: "1 18 * * *"
   image: python3.9
   emails: none
 
 - name: redcat
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/redcat"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/redcat.py"
   schedule: "1 1 * * *"
   image: python3.9
   emails: none
 
 - name: arwkisg1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/sug"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/sug.py"
   schedule: "1 1 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
 - name: arwkisg2
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/params_report"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/arwiki/params_report.py"
   schedule: "1 1 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
 - name: portals
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/portal/po -ns:0 2030 -cat:تصنيف:مقالات_بحاجة_لشريط_بوابات"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/portal/po.py -ns:0 2030 -cat:تصنيف:مقالات_بحاجة_لشريط_بوابات"
   schedule: "5 5 * * *"
   image: python3.9
   emails: none
 
 - name: portals3
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/portal/po -lange:enfr -newpages2:100"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/portal/po.py -lange:enfr -newpages2:100"
   schedule: "*/20 * * * *"
   image: python3.9
   emails: none

@@ -1,11 +1,11 @@
 - name: search
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/search_cats"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/search_cats.py"
   schedule: "@daily"
   image: python3.9
   emails: none
 
 - name: ennew1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/ennew_24 -depth:5"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/ennew_24.py -depth:5"
   schedule: "2 1 * * *"
   mem: 1Gi
   #cpu: 2
@@ -13,7 +13,7 @@
   emails: none
 
 - name: nnew
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/nnew 2040 -sqllimit:200"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/nnew.py 2040 -sqllimit:200"
   schedule: "1 * * * *"
   mem: 1Gi
   #cpu: 2
@@ -21,7 +21,7 @@
   emails: none
 
 - name: recentc9
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/cat2 -ns:14 -usercontribs:Mr.Ibrahembot ssubcat -limit:150"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/cat2.py -ns:14 -usercontribs:Mr.Ibrahembot ssubcat -limit:150"
   schedule: "13 * * * *"
   mem: 1Gi
   #cpu: 2
@@ -29,7 +29,7 @@
   emails: none
 
 - name: en-mst
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/most/bot"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/most/bot.py"
   schedule: "1 5 * * *"
   mem: 1Gi
   #cpu: 2
@@ -37,50 +37,50 @@
   emails: none
 
 - name: caa8
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/cat -depth:4 -range:6 -newpages2:100"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/cat.py -depth:4 -range:6 -newpages2:100"
   schedule: "40 * * * *"
   image: python3.9
   emails: none
 
 - name: ncr1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/newcat -ns:14 -newpages:30 usesql"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/newcat.py -ns:14 -newpages:30 usesql"
   schedule: "35 * * * *"
   image: python3.9
   emails: none
 
 - name: ncr2
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/newcat -ns:14 -newpages:20"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/newcat.py -ns:14 -newpages:20"
   schedule: "55 * * * *"
   image: python3.9
   emails: none
 
 - name: newcats
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/newcat -ns:14 -usernewpages:Mr.Ibrahembot -limit:100"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/newcat.py -ns:14 -usernewpages:Mr.Ibrahembot -limit:100"
   schedule: "1 * * * *"
   image: python3.9
   emails: none
 
 - name: empty-cats
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/newcat -ns:14 -subcats:تصنيف:تصنيفات_غير_مستخدمة"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/newcat.py -ns:14 -subcats:تصنيف:تصنيفات_غير_مستخدمة"
   schedule: "8 8 * * *"
   image: python3.9
   emails: none
 
 - name: noncats
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/catar workarcat -links:ويكيبيديا:مشروع_ويكي_الصيانة/التصنيفات_غير_المصنفة"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/c18/catar.py workarcat -links:ويكيبيديا:مشروع_ويكي_الصيانة/التصنيفات_غير_المصنفة"
   schedule: "@weekly"
   image: python3.9
   emails: none
 
 - name: mkn-1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/mkn/nat en -sqllimit:200"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/mkn/nat.py en -sqllimit:200"
   schedule: "1 1 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
 - name: mkn-2
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/mkn/a all_o_keys"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core_cat/mkn/a.py all_o_keys"
   schedule: "1 1 * * *"
   mem: 1Gi
   image: python3.9

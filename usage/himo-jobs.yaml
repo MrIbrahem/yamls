@@ -17,73 +17,73 @@
   emails: none
 
 - name: mvn-cats
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py mv_bots/not_empty_cats_run"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py mv_bots/not_empty_cats_run.py"
   schedule: "@weekly"
   image: python3.9
   emails: none
 
 - name: mvcat
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py mv_bots/mvcats_run"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py mv_bots/mvcats_run.py"
   schedule: "*/15 * * * *"
   image: python3.9
   emails: none
 
 - name: reff1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/refn/r_page"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/refn/r_page.py"
   schedule: "1 * * * *"
   image: python3.9
   emails: none
 
 - name: reff9
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/refn/r -ns:0,10 -recentchanges:50"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/refn/r.py -ns:0,10 -recentchanges:50"
   schedule: "*/20 * * * *"
   image: python3.9
   emails: none
 
 - name: ilinew
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/new"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/new.py"
   schedule: "@hourly"
   image: python3.9
   emails: none
 
 - name: ili1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/f -ns:10 main3"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/f.py -ns:10 main3"
   schedule: "@hourly"
   image: python3.9
   emails: none
 
 - name: ili2
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/f main3"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/f.py main3"
   schedule: "@hourly"
   image: python3.9
   emails: none
 
 - name: iliwd2-1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/illwd2 -ns:0,10 main3"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/illwd2.py -ns:0,10 main3"
   schedule: "@hourly"
   image: tf-python39
   emails: none
 
 - name: iliwd2-2
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/ill2 -newpages:100 ill2"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/ill/ill2.py -newpages:100 ill2"
   schedule: "@hourly"
   image: tf-python39
   emails: none
 
 - name: tmpcat-1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/catsn/tempcat -ns:0 -recentchanges:50"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/catsn/tempcat.py -ns:0 -recentchanges:50"
   schedule: "*/20 * * * *"
   image: tf-python39
   emails: none
 
 - name: tmpcat-2
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/catsn/tempcat -newpages2:50"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/catsn/tempcat.py -newpages2:50"
   schedule: "*/20 * * * *"
   image: tf-python39
   emails: none
 
 - name: temp2-cat
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/catsn/tempcat -ns:10 gen_ar_template -newpages:100"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/catsn/tempcat.py -ns:10 gen_ar_template -newpages:100"
   schedule: "20 * * * *"
   image: python3.9
   emails: none

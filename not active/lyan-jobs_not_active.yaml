@@ -1,6 +1,6 @@
 # s إنشاء التصانيف
 - name: yaml-nchng
-  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/scat -ns:0,10 -recentchanges:100"
+  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/scat.py -ns:0,10 -recentchanges:100"
   schedule: "*/20 * * * *"
   mem: 1Gi
   #cpu: 2
@@ -8,7 +8,7 @@
   emails: none
 
 - name: ennew
-  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/ennew -depth:4 -range:6 -newpages:200"
+  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/ennew.py -depth:4 -range:6 -newpages:200"
   schedule: "*/25 * * * *"
   mem: 1Gi
   #cpu: 2
@@ -17,7 +17,7 @@
 
 # s إنشاء التصانيف
 - name: yaml-nchng2
-  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/scat -depth:6 -ns:0 -newpages2:50"
+  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/scat.py -depth:6 -ns:0 -newpages2:50"
   schedule: "*/20 * * * *"
   mem: 1Gi
   #cpu: 2
@@ -25,7 +25,7 @@
   emails: none
 
 - name: yaml-scat1
-  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/scat -depth:6 -ns:14 -newpages:20"
+  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/scat.py -depth:6 -ns:14 -newpages:20"
   schedule: "*/20 * * * *"
   mem: 1Gi
   #cpu: 2
@@ -33,7 +33,7 @@
   emails: none
 
 - name: yaml-scat2
-  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/scat -range:6 -depth:6 -pageinnewcat:20"
+  command: "$HOME/localx/bin/python3 $HOME/c9/pwb.py core_cat/c18/scat.py -range:6 -depth:6 -pageinnewcat:20"
   schedule: "*/20 * * * *"
   mem: 1Gi
   #cpu: 2
