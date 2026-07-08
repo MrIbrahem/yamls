@@ -27,13 +27,13 @@
   emails: none
 
 - name: portals1
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py portalpages/ss numbs:1 -portal:اليمن -portal:سباق_الدراجات_الهوائية"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/portalpages/ss numbs:1 -portal:اليمن -portal:سباق_الدراجات_الهوائية"
   schedule: "@weekly"
   image: python3.9
   emails: none
 
 - name: portals2
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py portalpages/ss numbs:1000"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py core1/portalpages/ss numbs:1000"
   schedule: "@weekly"
   image: python3.9
   emails: none
