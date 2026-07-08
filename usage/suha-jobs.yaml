@@ -1,23 +1,23 @@
 - name: refacol-1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py cite/reff makenewarchive -ns:0 -recentchanges:1000"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py cite/reff makenewarchive -ns:0 -recentchanges:1000"
   schedule: "*/15 * * * *"
   image: python3.9
   emails: none
 
 - name: refacol-2
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py cite/reff -newpages2:50"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py cite/reff -newpages2:50"
   schedule: "*/15 * * * *"
   image: python3.9
   emails: none
 
 - name: refacol-3
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py cite/reff -ns:0 -recentchanges:50"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py cite/reff -ns:0 -recentchanges:50"
   schedule: "*/15 * * * *"
   image: python3.9
   emails: none
 
 - name: stbsql2
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/stubsql"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py stub/stubsql"
   schedule: "5 3 * * *"
   mem: 1Gi
   #cpu: 2
@@ -25,7 +25,7 @@
   emails: none
 
 - name: stbbio1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/b2_new new:تصنيف:بذرة_أعلام P106 withnoflage numbs:300 noflag"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py stub/b2_new new:تصنيف:بذرة_أعلام P106 withnoflage numbs:300 noflag"
   schedule: "7 7 * * *"
   mem: 1Gi
   #cpu: 2
@@ -33,28 +33,28 @@
   emails: none
 
 - name: stub-1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 country:all PP31 P31 P106"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py stub/p27 country:all PP31 P31 P106"
   schedule: "5 3 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
 - name: stub-2
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 ppp:qq PP31 P17"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py stub/p27 ppp:qq PP31 P17"
   schedule: "5 3 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
 - name: stub-3
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/p27 ppp:تصنيف:بذرة_أعلام P27 P106"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py stub/p27 ppp:تصنيف:بذرة_أعلام P27 P106"
   schedule: "5 3 * * *"
   mem: 1Gi
   image: python3.9
   emails: none
 
 - name: stubwd1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/wd b2 wikidata:bio cat:تصنيف:بذرة_أعلام limit:2000"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py stub/wd b2 wikidata:bio cat:تصنيف:بذرة_أعلام limit:2000"
   schedule: "5 3 * * *"
   mem: 1Gi
   #cpu: 2
@@ -62,7 +62,7 @@
   emails: none
 
 - name: stubwd2
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py stub/wd b2 new:تصنيف:بذرة numbs:300"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py stub/wd b2 new:تصنيف:بذرة numbs:300"
   schedule: "5 3 * * *"
   mem: 1Gi
   #cpu: 2

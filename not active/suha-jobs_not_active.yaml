@@ -1,25 +1,25 @@
 
 #- name: prope-1
-#  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py prope/prop6"
+#  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py prope/prop6"
 #  schedule: '@weekly'
 #  image: python3.9
 #  emails: none
 
 #- name: prope-2
-#  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py prop/prop4 -ns:10 -ref:قالب:يستخدم_ويكي_بيانات2"
+#  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py prop/prop4 -ns:10 -ref:قالب:يستخدم_ويكي_بيانات2"
 #  schedule: '@weekly'
 #  image: python3.9
 #  emails: none
 
 #- name: prope-3
-#  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py prop/prop4 -ns:10 -ref:قالب:قيمة_ويكي_بيانات"
+#  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py prop/prop4 -ns:10 -ref:قالب:قيمة_ويكي_بيانات"
 #  schedule: '@weekly'
 #  image: python3.9
 #  emails: none
 
 # a إضافة قالب أشخاص حسب المهنة
 - name: fooian1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py c30/m main3 -save"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py c30/m main3 -save"
   schedule: "6 6 * * *"
   mem: 1Gi
   #cpu: 2
@@ -27,13 +27,13 @@
   emails: none
 
 - name: portals1
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py portalpages/ss numbs:1 -portal:اليمن -portal:سباق_الدراجات_الهوائية"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py portalpages/ss numbs:1 -portal:اليمن -portal:سباق_الدراجات_الهوائية"
   schedule: "@weekly"
   image: python3.9
   emails: none
 
 - name: portals2
-  command: "$HOME/local/bin/python3 $HOME/core8/pwb.py portalpages/ss numbs:1000"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py portalpages/ss numbs:1000"
   schedule: "@weekly"
   image: python3.9
   emails: none
