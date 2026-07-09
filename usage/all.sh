@@ -45,8 +45,6 @@ python3 c9/pwb.py core1/ill/new.py
 python3 c9/pwb.py core_cat/mkn/a.py all_o_keys
 python3 c9/pwb.py core_cat/mkn/nat.py en -sqllimit:200
 python3 c9/pwb.py core_cat/most/bot.py
-python3 c9/pwb.py mv_bots/mvcats_run.py
-python3 c9/pwb.py mv_bots/not_empty_cats_run.py
 python3 c9/pwb.py wd_core/nep/si3g.py -newpages:400 save
 python3 c9/pwb.py wd_core/nep/si3g_qua.py returnlab limit:1000
 python3 c9/pwb.py wd_core/neq/nldes3.py a2r sparql:Q13442814,Q13433827,Q265158,Q191067,Q19389637,Q953806 all:1000 doar
@@ -66,3 +64,6 @@ python3 c9/pwb.py stub_bots/stub/wd.py b2 new:تصنيف:بذرة numbs:300
 python3 c9/pwb.py stub_bots/stub/wd.py b2 wikidata:bio cat:تصنيف:بذرة_أعلام limit:2000
 python3 c9/pwb.py core1/wd_link/wdlink.py -ns:0,14 -newpages:150
 python3 c9/pwb.py core1/wd_link/wdlink.py -ns:14 -usernewpages:Mr.Ibrahembot
+
+python3 c9/pwb.py BOTS_REPOS/mv_bots/mvcats_run.py
+python3 c9/pwb.py BOTS_REPOS/mv_bots/not_empty_cats_run.py

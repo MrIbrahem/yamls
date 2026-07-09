@@ -5,25 +5,25 @@
   emails: none
 
 - name: owid
-  command: "$HOME/OWID-categories/owid_task.sh"
+  command: "$HOME/BOTS_REPOS/OWID-categories/owid_task.sh"
   schedule: "@weekly"
   image: tf-python39
   emails: none
 
 - name: unusedcats
-  command: "$HOME/local/bin/python3 ~/bots/UnusedCategories/unused_categories_bot.py"
+  command: "$HOME/local/bin/python3 ~/BOTS_REPOS/UnusedCategories/unused_categories_bot.py"
   schedule: "@daily"
   image: python3.9
   emails: none
 
 - name: mvn-cats
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py mv_bots/not_empty_cats_run.py"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py BOTS_REPOS/mv_bots/not_empty_cats_run.py"
   schedule: "@weekly"
   image: python3.9
   emails: none
 
 - name: mvcat
-  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py mv_bots/mvcats_run.py"
+  command: "$HOME/local/bin/python3 $HOME/c9/pwb.py BOTS_REPOS/mv_bots/mvcats_run.py"
   schedule: "*/15 * * * *"
   image: python3.9
   emails: none
